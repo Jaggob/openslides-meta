@@ -1455,6 +1455,10 @@ meeting:
   assignments_export_preamble:
     type: text
     restriction_mode: B
+  assignments_enable_candidate_applications:
+    type: boolean
+    default: True
+    restriction_mode: B
 
   # Assignment polls
   assignment_poll_ballot_paper_selection:
