@@ -1457,7 +1457,7 @@ meeting:
     restriction_mode: B
   assignments_enable_candidate_applications:
     type: boolean
-    default: True
+    default: False
     restriction_mode: B
 
   # Assignment polls
@@ -2207,6 +2207,7 @@ agenda_item:
         - motion
         - motion_block
         - assignment
+        - assignment_candidate
         - topic
       field: agenda_item_id
     required: true
@@ -3640,6 +3641,13 @@ assignment_candidate:
     restriction_mode: A
     required: true
     constant: true
+    on_delete: CASCADE
+  agenda_item_id:
+    type: relation
+    to: agenda_item/content_object_id
+    on_delete: CASCADE
+    equal_fields: meeting_id
+    restriction_mode: A
   projection_ids:
     type: relation-list
     to: projection/content_object_id
