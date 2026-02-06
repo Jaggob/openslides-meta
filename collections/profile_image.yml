@@ -1,0 +1,24 @@
+id:
+  type: number
+  restriction_mode: A
+  constant: true
+  required: true
+
+user_id:
+  type: relation
+  to: user/profile_image_id
+  restriction_mode: A
+  required: true
+  constant: true
+
+mediafile_id:
+  type: relation
+  to: mediafile/profile_image_ids
+  on_delete: CASCADE
+  restriction_mode: A
+  required: true
+  constant: true
+
+create_timestamp:
+  type: timestamp
+  restriction_mode: A
