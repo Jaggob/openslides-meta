@@ -72,6 +72,10 @@ gender_id:
   type: relation
   to: gender/user_ids
   restriction_mode: A
+profile_image_id:
+  type: relation
+  to: mediafile/profile_image_user_ids
+  restriction_mode: A
 
   # Organization, meeting and committee
 organization_management_level:
@@ -153,4 +157,3 @@ organization_id:
   required: true
   restriction_mode: F
   constant: true
-

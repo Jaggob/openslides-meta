@@ -59,4 +59,7 @@ meeting_mediafile_ids:
   to: meeting_mediafile/mediafile_id
   on_delete: CASCADE
   restriction_mode: A
-
+profile_image_user_ids:
+  type: relation-list
+  to: user/profile_image_id
+  restriction_mode: A
