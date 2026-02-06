@@ -786,6 +786,10 @@ mediafile:
     to: meeting_mediafile/mediafile_id
     on_delete: CASCADE
     restriction_mode: A
+  profile_image_user_ids:
+    type: relation-list
+    to: user/profile_image_id
+    restriction_mode: A
 meeting:
   id:
     type: number
@@ -4271,6 +4275,10 @@ user:
   gender_id:
     type: relation
     to: gender/user_ids
+    restriction_mode: A
+  profile_image_id:
+    type: relation
+    to: mediafile/profile_image_user_ids
     restriction_mode: A
   organization_management_level:
     type: string
