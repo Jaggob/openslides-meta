@@ -427,6 +427,9 @@ meeting_user:
   about_me:
     type: HTMLStrict
     restriction_mode: A
+  notification_state:
+    type: JSON
+    restriction_mode: A
   vote_weight:
     type: decimal(6)
     minimum: "0.000001"
