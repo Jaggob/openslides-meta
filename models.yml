@@ -2236,6 +2236,10 @@ agenda_item:
     required: true
     restriction_mode: A
     constant: true
+  history_entry_ids:
+    type: relation-list
+    to: history_entry/model_id
+    restriction_mode: A
 
 list_of_speakers:
   id: *id_field
@@ -3625,6 +3629,10 @@ assignment_candidate:
     required: true
     restriction_mode: A
     constant: true
+  history_entry_ids:
+    type: relation-list
+    to: history_entry/model_id
+    restriction_mode: A
 
 # models for the poll list election
 poll_candidate_list:
@@ -4311,6 +4319,8 @@ history_entry:
         - user
         - motion
         - assignment
+        - assignment_candidate
+        - agenda_item
       field: history_entry_ids
     restriction_mode: A
   position_id:
