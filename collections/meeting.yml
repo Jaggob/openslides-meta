@@ -676,6 +676,10 @@ fields:
   users_forbid_delegator_to_vote:
     type: boolean
     restriction_mode: B
+  users_vote_delegations_max_amount:
+    type: number
+    default: 1
+    restriction_mode: B
 
   # Assignments
   assignments_export_title:
@@ -1193,4 +1197,3 @@ fields:
     type: relation-list
     to: history_entry/meeting_id
     restriction_mode: A
-
