@@ -1,7 +1,7 @@
 
 -- schema_relational.sql for initial database setup OpenSlides
 -- Code generated. DO NOT EDIT.
--- MODELS_YML_CHECKSUM = 'd4c10a7089349cb4882580ceda97f1ba'
+-- MODELS_YML_CHECKSUM = '1f99c53b00f6af7389391b881d2a05a2'
 
 
 -- ENUM definitions
@@ -1441,6 +1441,7 @@ Password: {password}
 This email was generated automatically.',
     users_enable_vote_delegations boolean,
     users_vote_delegations_max_amount integer
+        CONSTRAINT minimum_meeting_users_vote_delegations_max_amount CHECK (users_vote_delegations_max_amount >= 1)
         CONSTRAINT default_meeting_users_vote_delegations_max_amount DEFAULT 1,
     users_forbid_delegator_in_list_of_speakers boolean,
     users_forbid_delegator_as_submitter boolean,
